@@ -1,0 +1,123 @@
+<ion-header >
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Dados pessoais</ion-title>
+    <!-- <ion-buttons slot="end">
+      <ion-button (click)="addUser()">Salvar</ion-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="user.nome" required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" [(ngModel)]="user.email" required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Nacionalidade</ion-label>
+      <ion-select okText="Ok" cancelText="Cancelar" [(ngModel)]="user.nacionalidade">
+        <ion-select-option value=""> </ion-select-option>
+        <ion-select-option value="Teste">Teste</ion-select-option>
+        <ion-select-option value="Brasileiro">Brasileiro</ion-select-option>
+        <ion-select-option value="Argentino">Argentino</ion-select-option>
+        <ion-select-option value="Indiano">Indiano</ion-select-option>
+        <ion-select-option value="Americano">Americano</ion-select-option>
+        <ion-select-option value="Cubano">Cubano</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Estado</ion-label>
+      <ion-select okText="Ok" cancelText="Cancelar" [(ngModel)]="user.estado">
+        <ion-select-option value=""> </ion-select-option>
+        <ion-select-option value="Teste">Teste</ion-select-option>
+        <ion-select-option value="Distrito Federal">Distrito Federal</ion-select-option>
+        <ion-select-option value="São Paulo">São Paulo</ion-select-option>
+        <ion-select-option value="Rio de Janeiro">Rio de Janeiro</ion-select-option>
+        <ion-select-option value="Bahia">Bahia</ion-select-option>
+        <ion-select-option value="Minas Gerais">Minas Gerais</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Escolaridade</ion-label>
+      <ion-select okText="Ok" cancelText="Cancelar" [(ngModel)]="user.escolaridade">
+        <ion-select-option value=""> </ion-select-option>
+        <ion-select-option value="Teste">Teste</ion-select-option>
+        <ion-select-option value="Ensino Fundamental">Ensino Fundamental</ion-select-option>
+        <ion-select-option value="Ensino Médio">Ensino Médio</ion-select-option>
+        <ion-select-option value="Ensino Superior">Ensino Superior</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Situação Conjugal</ion-label>
+      <ion-select okText="Ok" cancelText="Cancelar" [(ngModel)]="user.situacao_conjugal">
+        <ion-select-option value=""></ion-select-option>
+        <ion-select-option value="Teste">Teste</ion-select-option>
+        <ion-select-option value="Solterio">Solterio</ion-select-option>
+        <ion-select-option value="Casado">Casado</ion-select-option>
+        <ion-select-option value="Viúvo">Viúvo</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Situação Escolar</ion-label>
+      <ion-select okText="Ok" cancelText="Cancelar" [(ngModel)]="user.situacao_escolar">
+        <ion-select-option value=""></ion-select-option>
+        <ion-select-option value="Teste">Contas</ion-select-option>
+        <ion-select-option value="Sim">Sim</ion-select-option>
+        <ion-select-option value="Não">Não</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nome da mãe</ion-label>
+      <ion-input type="text" [(ngModel)]="user.nome_mae" required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nome do Pai</ion-label>
+      <ion-input type="text" [(ngModel)]="user.nome_pai" required>
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+<ion-footer *ngIf="!user.id">
+  <ion-toolbar color="success">
+    <ion-button expand="full" fill="clear" color="light" (click)="addUser()">
+      <ion-icon name="checkmark" slot="start"></ion-icon>
+      Salvar
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
+ 
+<ion-footer *ngIf="user.id">
+  <ion-row no-padding text-center>
+    <ion-col size="6">
+      <ion-button expand="block" fill="outline" color="danger" (click)="exUser()">
+        <ion-icon name="trash" slot="start"></ion-icon>
+        Excluir
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button expand="block" fill="solid" color="success" (click)="atUser()">
+        <ion-icon name="save" slot="start"></ion-icon>
+        Atualizar
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

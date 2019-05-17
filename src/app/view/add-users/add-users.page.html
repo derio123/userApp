@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Dados pessoais</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="addUser()">Salvar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="newUsers.nome" required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" [(ngModel)]="newUsers.email" required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Nacionalidade</ion-label>
+      <ion-select okText="Ok" cancelText="Cancelar" [(ngModel)]="newUsers.nacionalidade">
+        <ion-select-option value=""> </ion-select-option>
+        <ion-select-option value="Teste">Teste</ion-select-option>
+        <ion-select-option value="Brasileiro">Brasileiro</ion-select-option>
+        <ion-select-option value="Argentino">Argentino</ion-select-option>
+        <ion-select-option value="Indiano">Indiano</ion-select-option>
+        <ion-select-option value="Americano">Americano</ion-select-option>
+        <ion-select-option value="Cubano">Cubano</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Estado</ion-label>
+      <ion-select okText="Ok" cancelText="Cancelar" [(ngModel)]="conta.categoria">
+        <ion-select-option value=""> </ion-select-option>
+        <ion-select-option value="Teste">Teste</ion-select-option>
+        <ion-select-option value="Distrito Federal">Distrito Federal</ion-select-option>
+        <ion-select-option value="São Paulo">São Paulo</ion-select-option>
+        <ion-select-option value="Rio de Janeiro">Rio de Janeiro</ion-select-option>
+        <ion-select-option value="Bahia">Bahia</ion-select-option>
+        <ion-select-option value="Minas Gerais">Minas Gerais</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Escolaridade</ion-label>
+      <ion-select okText="Ok" cancelText="Cancelar" [(ngModel)]="conta.categoria">
+        <ion-select-option value=""> </ion-select-option>
+        <ion-select-option value="Teste">Teste</ion-select-option>
+        <ion-select-option value="Ensino Fundamental">Ensino Fundamental</ion-select-option>
+        <ion-select-option value="Ensino Médio">Ensino Médio</ion-select-option>
+        <ion-select-option value="Ensino Superior">Ensino Superior</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Situação Conjugal</ion-label>
+      <ion-select okText="Ok" cancelText="Cancelar" [(ngModel)]="conta.categoria">
+        <ion-select-option value=""></ion-select-option>
+        <ion-select-option value="Teste">Teste</ion-select-option>
+        <ion-select-option value="Solterio">Solterio</ion-select-option>
+        <ion-select-option value="Casado">Casado</ion-select-option>
+        <ion-select-option value="Viúvo">Viúvo</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Categoria de Teste</ion-label>
+      <ion-select okText="Ok" cancelText="Cancelar" [(ngModel)]="conta.categoria">
+        <ion-select-option value=""></ion-select-option>
+        <ion-select-option value="Teste">Contas</ion-select-option>
+        <ion-select-option value="Sim">Sim</ion-select-option>
+        <ion-select-option value="Não">Não</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Descrição</ion-label>
+      <ion-input type="text" [(ngModel)]="newUsers.nome_mae" required>
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
