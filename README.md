@@ -38,8 +38,11 @@ Digite no terminal os comandos abaixo:
 
 - Comentários adiconais:
 Links logo abaixo:
+
 Ionic 4: https://ionicframework.com/docs/installation/cli
+
 NodeJs: https://nodejs.org/en/download/
+
 Pacote do firebase: https://www.npmjs.com/package/@angular/fire;
 
 
